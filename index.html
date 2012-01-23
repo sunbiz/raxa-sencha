@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DHIS Touch</title>
+        <link rel="stylesheet" href="lib/touch/resources/css/sencha-touch.css" type="text/css">
+        <script type="text/javascript" src="lib/touch/sencha-touch-debug.js"></script>
+        <script type="text/javascript" src="lib/Ext.ux.touch.JSONPFormPanel.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+
+        <script type="text/javascript">
+            var host = 'http://healthmis.jelastic.servint.net';
+        </script> 
+
+    </head>
+    <body>
+        <!-- Place your model files here -->
+        <div id="sencha-models"></div>
+
+        <!-- Place your view files here -->
+        <div id="sencha-views">
+            <script type="text/javascript" src="app/views/Viewport.js"></script>
+            <script type="text/javascript" src="app/views/LoginForm.js"></script>
+            <script type="text/javascript" src="app/views/HomeScreen.js"></script>
+        </div>
+
+        <iframe id="dummy" name="dummy" style="display:none"></iframe>
+        <form id="loginForm" action="http://healthmis.jelastic.servint.net/dhis-web-commons-security/login.action" method="post" target="dummy">
+            <input id="j_username" type="hidden" name="j_username" value="" />
+            <input id="j_password" type="hidden" name="j_password" value="" />
+        </form>
+
+        <!-- Place your controller files here -->
+        <div id="sencha-controllers">
+            <script type="text/javascript" src="app/controllers/LoginFormController.js"></script>
+            <script type="text/javascript" src="app/controllers/HomeScreenController.js"></script>
+        </div>
+    </body>
+</html>
